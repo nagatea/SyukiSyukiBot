@@ -25,7 +25,7 @@ client.home_timeline(count: 20).each do |tweet|
       word = Word.new(tweet.text)
       meisi = word.get_word("名詞,一般", 2)
       if meisi != "not" 
-            puts word.get_initial_list
+            #puts word.get_initial_list
             break
       end
 end
