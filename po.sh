@@ -1,3 +1,3 @@
 #!/bin/sh
-cd /home/nagatech/SyukiSyukibot
+cd /home/nagatech/SyukiSyukiBot
 bundle exec ruby main.rb
