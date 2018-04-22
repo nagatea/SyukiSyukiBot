@@ -21,11 +21,11 @@ end
 meisi = ""
 
 client.home_timeline(count: 20).each do |tweet|
-      next if tweet.text.match(/@/) != nil
+      next if tweet.text.match(/@|http/) != nil
       word = Word.new(tweet.text)
       meisi = word.get_word("名詞,一般", 2)
       if meisi != "not" 
-            #puts word.get_initial_list
+            client.favorite(tweet.id)
             break
       end
 end
